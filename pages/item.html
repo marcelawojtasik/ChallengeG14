@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Funkoshop</title>
+    <title>Item | Funkoshop</title>
 </head>
 <body>
-    
+
     <header>
         <nav aria-label="Menú del header">
             <picture>
@@ -30,49 +30,28 @@
             </ul>
         </nav>
     </header>
-    <!--SECCION PRINCIPAL-->
     <main>
-        <!--BANNER-->
-        <section>
-            <article>
-                <h3>Nuevos Ingresos</h3>
-                <p> Descubrí el próximo Funko Pop de tu colección</p>
-                <a href="./shop.html">SHOP</a>
-                <!--La imagen de fondo puede incorporarse como background con CSS más adelante-->
-            </article>
+        <section>            
+                <picture>
+                    <img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda (Grogu)">
+                </picture>
+                <div>
+                    <p>STAR WARS</p>
+                    <h3>BABY YODA BLUEBALL</h3>
+                    <p>Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
+                    <p>$ 1799,99</p>
+                    <form action="">
+                        <label for="cantidad"></label>
+                        <input type="number" id="cantidad" name="cantidad" min="0" max="10" placeholder="0">
+                        <input type="submit" value="Agregar al carrito">
+                    </form>
+                    <a href="">Ver métodos de pago - 3 CUOTAS SIN INTERÉS</a>
+                </div>          
+           
         </section>
+
         <section>
-            <article>
-                <h3>Star Wars & The Mandalorian</h3>
-                <p>Disfruta de una saga que sigue agregando personajes a su colección.</p>
-                <a href="./shop.html">VER COLECCIÓN</a>                
-            </article>
-            <picture>
-                <img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Baby Yoda">
-            </picture> 
-        </section>
-        <section>  
-            <article>
-                <h3>POKEMON INDIGO</h3>
-                <p>Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
-                <a href="./shop.html">VER COLECCIÓN</a>                
-            </article>
-            <picture>
-                <img src="../img/pokemon/vulpix-1.webp" alt="Figura coleccionable Funko de la serie Pokemon Vulpix">
-            </picture>  
-        </section>  
-        <section>
-            <article>
-                <h3>HARRY POTTER</h3>
-                <p>Revive los recuerdos de una saga llena de magia y encanto.</p>
-                <a href="./shop.html">VER COLECCIÓN</a>                
-            </article>
-            <picture>
-                <img src="../img/harry-potter/snape-patronus-1.webp" alt="Figura coleccionable Funko del Patronus de Snape">
-            </picture> 
-        </section>   
-        <section>
-            <h2>Últimos Lanzamientos</h2>
+            <h2>PRODUCTOS RELACIONADOS</h2>
             <ul>
                 <li>
                     <article>
@@ -122,6 +101,7 @@
             </ul>
         </section>
     </main>
+    
 
     <footer>
         <section>
@@ -149,7 +129,6 @@
         <p>All rights reserved 2023 - Funkoshop </p>
 
     </footer>
-
     
 </body>
 </html>
