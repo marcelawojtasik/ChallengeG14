@@ -41,6 +41,8 @@
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2rem;
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
     --spacing-8: 0.8rem;
@@ -64,7 +66,7 @@ html{
 
 a{
     text-decoration: none; /*para q los enlaces no tengan el subrayado*/
-    font-size: 2em; /*saque la medida de figma*/
+    /* font-size: 2em; saque la medida de figma*/
     font-family: inherit;
     color: inherit; /*el heredado x etiqueta padre: html*/
 }
@@ -83,7 +85,76 @@ p{
     font-size: 1.8em;
 }
 
-.container{
+img { /*Normalizo para que se ajusten al contenedor padre*/
+    width: 100%
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+
+/*HEADER*/
+header {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar__logo {
+    max-width: 300px;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__link{
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block /*para que el hover se note sobre todo el boton*/;
+    transition: background .3s ease-in-out;
+    position: relative; /*Me va a servir para que el submenu sea relativo al padre*/
+
+}
+
+.navbar__link:hover{
+    background-color: var(--primary-900);
+}
+
+.with-icon{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu{
+    display: block;
+}
+
+.submenu{
+    display: none /*si no estoy en hover, q permanezca oculto*/;
+    width: 300px;
+    position: absolute /*para sacarlo del flujo natural de la pag*/;
+    background-color: var(--dark-bg-solid);
+}
+
+.submenu__link{
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+    transition: background .3s ease-in-out;
+}
+
+.submenu__link:hover{
+    background-color: var(--primary-900);
 }
