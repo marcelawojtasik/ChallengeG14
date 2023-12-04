@@ -1,0 +1,13 @@
+/*SHOP*/
+.shop_main{
+    display: flex;
+    flex-direction: row;     
+}
+
+.shop_items{       
+    display: flex;
+}
+
+.shop__item{
+    flex-flow: column wrap;
+}

@@ -1,0 +1,13 @@
+/*ADMIN*/
+.admin{
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    padding: var(--spacing-24);
+}
+.admin_title{
+    font-family: var(--alternative-font);
+    font-weight: 700;
+    font-size: var(--font-jumbo);
+    text-transform: uppercase;
+}
