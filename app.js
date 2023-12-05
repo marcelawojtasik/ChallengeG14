@@ -10,6 +10,9 @@ const adminRoutes = require('./src/routes/admin.routes')
 const PORT = 3004;
 
 app.use(express.static('public'));
+app.use(methodOverride('_method')); /*NPM i "Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it" p q desde los form pueda mandar peticiones distintas a post*/
+app.use(express.urlencoded());
+app.use(express.json()); /*Para q cuando mando algo x post paso por el body, traduce a un js q el prog pueda entender */
 
 app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
