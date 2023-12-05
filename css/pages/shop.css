@@ -1,0 +1,16 @@
+/*SHOP*/
+
+#shop {
+    display: flex;
+}
+
+.shop__items {
+    display: grid; 
+     
+    
+}
+
+.shop__item {
+    
+
+}
