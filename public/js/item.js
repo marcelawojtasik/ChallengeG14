@@ -1,3 +1,4 @@
+/*Botones sumar y quitar items*/
 const agregar= document.querySelector('#agregar');
 const quitar= document.querySelector('#quitar');
 const quantity = document.querySelector('#quantity');
