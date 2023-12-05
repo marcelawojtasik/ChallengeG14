@@ -2,9 +2,11 @@
   "name": "challenge-integrador-mw",
   "version": "1.0.0",
   "description": "**HTML + CSS**",
-  "main": "app.js", 
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon app.js",
+    "start" : "node app.js"
   },
   "keywords": [],
   "author": "",
