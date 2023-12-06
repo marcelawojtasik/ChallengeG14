@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     admin: (req,res) => {
         res.send('Esta es la vista de Admin desde el controller');
