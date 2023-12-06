@@ -5,7 +5,9 @@ module.exports = {
         res.render('index', {
             title: "Home | Funkoshop"
         }),
-    contact: (req,res) => res.send('Esta es la vista de Contacto'),
-    about: (req,res) => res.send('Esta es la vista sobre nosotros '),
+    contact: (req,res) => res.render('contact', {
+        title: "Contacto | Funkoshop"
+    }),
+    about: (req,res) => res.send('Esta es la vista sobre nosotros'),
     faqs: (req,res) => res.send('Esta es la vista de preguntas frecuentes')
 }
