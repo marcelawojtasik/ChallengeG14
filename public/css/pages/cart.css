@@ -82,13 +82,29 @@
     font-size: var(--font-medium);
 }
 .cart_resume{
-   
+   display: flex;
+   flex-direction: column;
+   padding: var(--spacing-24);
+   gap: 1.25rem;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px 0px #00000040;
+   background-color: var(--light-bg-solid);
+   justify-content: right;
+
+     
+}  
+
+
+.cart_resume__data{
+    justify-content: right;
+    
+    
 }
 
-.cart_resume_data{
+.cart_resume_desc{
     font-family: var(--base-font);
     font-weight: 600;
-    font-size: var(--font-medium);
+    font-size: var(--font-small);
     margin: var(--spacing-8) 0;
 }
 

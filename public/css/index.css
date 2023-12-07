@@ -16,9 +16,11 @@
 @import url('/css/components/card.css');
 @import url('/css/components/slider.css');
 
-@import url('/css/pages/shop.css');
 @import url('/css/pages/cart.css');
 @import url('/css/pages/admin.css');
+@import url('/css/pages/login.css');
+@import url('/css/pages/shop.css');
+@import url('/css/pages/edit.css');
 
 
 

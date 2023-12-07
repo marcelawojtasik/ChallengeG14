@@ -7,15 +7,60 @@
     <title><%=title%></title>
 </head>
 <body>
-    <%- include ('../partials/header')%>
-    <section class="admin">
-        <p class="admin_title">EN CONSTRUCCION</p>
-        
-    </section>
-
+    <%- include ('../partials/headerUser')%>
     
-   
+    <main class="container">
+        <section class="admin_search">
+            <i class="fa-solid fa-magnifying-glass" class="admin__search_icon"></i>
+            <input type="search" name="admin_search" id="admin_search" placeholder="código, nombre o categoría">
+        </section>
+        <section class="admin_table_title">
+            <div>
+                <p class="admin_title">Listado de productos</p>                
+            </div>
+            <div>
+                <a class="admin_add_item" href="">agregar  <i class="fa-solid fa-square-plus"></i> </a>
+            </div>
+        </section>                      
+            <table> 
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Código</th>
+                    <th>Nombre del Producto</th>
+                    <th>Categoría</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>STW001001</td>
+                    <td>Baby Yoda Blueball</td>
+                    <td class="admin_item_licence">STAR Wars</td>
+                    <td class="edit">
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <button type="button"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr> 
+                  <tr>
+                    <td>2</td>
+                    <td>STW001002</td>
+                    <td>Boba Fett Fighter</td>
+                    <td>STAR WARS</td>
+                    <td class="edit">
+                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <button type="button"><i class="fa-solid fa-trash-can"></i></button>
+                    </td>
+                  </tr>                   
+                  
+                </tbody>
+            </table>            
+         
+
+    </main>
 
     <%- include ('../partials/footer')%>
+    <script src="https://kit.fontawesome.com/cfc2431752.js" crossorigin="anonymous"></script>
 </body>
 </html>

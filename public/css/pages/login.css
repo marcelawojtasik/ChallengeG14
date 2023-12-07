@@ -1,0 +1,110 @@
+#form_login{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-36);
+    padding-top: var(--spacing-36);
+    padding-bottom: var(--spacing-36); 
+    margin: 0 auto var(--spacing-36) auto;
+}
+
+.login_title{
+    font-family: var(--alternative-font);
+    font-weight: 700;
+    font-size: var(--font-jumbo);
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;    
+    flex-direction: row;
+    margin: var(--spacing-24) auto;
+}
+
+.login_data{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+
+.login_label{
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    text-align: left;
+    width: 200px;
+    flex-direction: row;
+}
+
+.info_login{          
+    font-family:var(--base-font);
+    font-size:var(--font-small);
+    color:var(--light-bg-solid);
+    border-top:none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid var(--primary-solid);
+    width: 25rem;
+    height: 2rem;     
+    text-align: center; 
+}
+
+.text_login{
+    color: var(--dark-solid);
+    font-family: var(--base-font);
+    font-size: var(--font-large);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.096rem;
+    margin-right: 15px;
+}
+.login__buttons{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: var(--spacing-36)
+}
+
+.btn_login{
+    font-family: var(--base-font); 
+    font-size: var(--font-small);
+    color: var(--light-font-solid);
+    background-color: var(--primary-solid);
+    border: none;
+    font-weight: 400;
+    padding:var(--spacing-12);
+    width: 11rem;
+    height: 5rem;
+}
+
+.remember_user{
+    color: var(--dark-solid);
+    font-family: var(--base-font); 
+    font-size: var(--font-medium);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.forget_password{
+    color: var(--secondary-solid);
+    font-family: var(--base-font);
+    font-size: var(--font-small);
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none; 
+}
+
+input, input::placeholder{
+    font-size: var(--font-xsmall);
+}
+
+
+
+
+
+
+
+
+
