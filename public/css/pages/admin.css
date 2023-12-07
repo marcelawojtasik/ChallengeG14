@@ -7,7 +7,92 @@
 }
 .admin_title{
     font-family: var(--alternative-font);
-    font-weight: 700;
-    font-size: var(--font-jumbo);
+    font-weight: 500;
+    font-size: var(--font-display);
+    text-transform: uppercase;
+    padding-bottom: 2.5rem;
+    letter-spacing: 0.168rem;
+}
+
+#admin_search{    
+    word-spacing: var(--spacing-12);     
+    font-size: var(--font-xsmall);
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    width: 50rem;
+    height: 3rem;
+    margin: 2rem;
+}   
+
+.admin_item_licence{
     text-transform: uppercase;
 }
+
+.fa-magnifying-glass{
+    font-size: var(--font-medium);
+}
+
+input::placeholder{
+    font-size: var(--font-xsmall);
+    font-family: var(--alternative-font);
+    font-weight: 500;    
+}
+
+.admin_add_item{
+    color: var(--dark-solid);
+    text-align: right;
+    font-family: var(--base-font);
+    font-size: var(--font-large);
+    font-weight: 700;
+    letter-spacing: 0.096rem;
+    text-transform: uppercase;
+}
+
+.admin_table_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit{
+    word-spacing: var(--spacing-28);
+    text-align: right;
+}
+
+.fa-square-plus{
+    color: var(--primary-solid);
+}
+
+.fa-pen{
+    color: var(--secondary-solid);
+}
+
+.fa-trash-can{
+    font-size: var(--font-medium);
+}
+
+button{
+    color: var(--primary-solid);
+    border: none;
+}
+
+table{
+    color: var(--dark-solid);
+    font-family: var(--base-font);
+    font-size: var(--font-large);
+    font-style: normal;
+    letter-spacing: 0.96px;
+    text-align: left;
+    width: 100%;
+}
+
+thead{
+    font-weight: 700;
+    line-height: normal;
+}
+
+td{
+    font-weight: 500;
+    line-height: 253.523%; /* 60.845px */
+}
+

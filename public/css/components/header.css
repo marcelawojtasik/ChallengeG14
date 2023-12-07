@@ -26,6 +26,7 @@ header {
     display: inline-block /*para que el hover se note sobre todo el boton*/;
     transition: background .3s ease-in-out;
     position: relative; /*Me va a servir para que el submenu sea relativo al padre*/
+    text-transform: uppercase;
 
 }
 

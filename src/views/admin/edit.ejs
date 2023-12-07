@@ -7,14 +7,60 @@
     <title><%=title%></title>
 </head>
 <body>
-    <%- include ('../partials/header')%>
-    <section class="admin">
-        <p class="admin_title">EN CONSTRUCCION</p>
-        
-    </section>
-
+    <%- include ('../partials/headerUser')%>
     
-   
+    <main>
+        <section class="editItem">
+            <p class="admin_title">Editar item</p> 
+        <section class="info_editItem">
+            <label class="label_editItem" for="">Categoría:</label>
+            <select class="select_options" name="categorias" id="categoria">
+                <option selected disabled value="">Figuras</option>
+                <option value="">Funkos</option>
+                <option value="">Remeras</option>
+                <option value="">Llaveros</option>
+            </select>
+            <label class="label_editItem" for="">Licencia:</label>
+            <select class="select_options" name="" id="licencia">
+                <option selected disabled value="">Naruto Shippuden</option>
+                <option value="">Harry Potter</option>
+                <option value="">Star Wars</option>
+                <option value="">Pokemon</option>
+            </select>
+        </section>        
+        <section class="info_editItem">
+            <label class="label_editItem2" for="">Nombre del producto:</label>
+            <input class="input_editItem" type="text" placeholder="Kakashi Hatake Shippuden Saga">
+        </section>        
+        <textarea class="textarea_editItem" name="" id="">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori</textarea>                             
+        
+        <section  class="info_editItem">
+            <label class="label_editItem2" for="">SKU:</label>
+            <input class="input_editItem2" type="text" placeholder="NAR001012">
+            <label class="label_editItem2" for="">Precio:</label>
+            <input class="input_editItem2" type="text" name="" id="" placeholder="$1799.99">
+            <label class="label_editItem2" for="">Stock:</label>
+            <input class="input_editItem2" type="text" name="" placeholder="10">
+        </section>        
+        <section class="info_editItem">
+            <label class="label_editItem2" for="">Descuento:</label>
+            <input class="input_editItem2" type="text" name="" id="" placeholder="10%">
+            <label class="label_editItem2" for="">Cuotas:</label>
+            <select class="select_options" id="cuotas">
+                <option selected value="">3 cuotas sin interés</option>
+                <option value="">6 cuotas con interés bajo</option>
+                <option value="">12 cuotas con interés</option>
+            </select>
+        </section>
+        
+        <section>
+            <label class="label_editItem2" for="">Imágenes:</label>
+            <input class="file" type="file" id="file">
+        </section>
+            <button class="btn_editItem" type="submit">Modificar Producto</button>
+        
+        </section>
+    </main>   
 
     <%- include ('../partials/footer')%>
 </body>

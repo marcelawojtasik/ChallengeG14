@@ -1,0 +1,111 @@
+.admin{
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    padding: var(--spacing-24);
+}
+.admin_title{
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    font-size: var(--font-display);
+    text-transform: uppercase;
+    padding-bottom: 2.5rem;
+    letter-spacing: 0.168rem;
+}
+
+/*Edit item*/
+
+.editItem{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    padding: 4rem 10rem;
+}
+
+.info_editItem{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.label_editItem{
+    color: #000;
+    font-family: Inter;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.096rem;
+}
+
+.select_options{    
+    font-family: var(--base-font);
+    font-size: var(--font-medium);    
+    font-weight: 500;
+    border-radius: 0.25rem;
+    width: 20rem;
+    height: 4rem;
+}
+
+.label_editItem2{
+    text-align: center;
+    font-family: var(--base-font);
+    font-size: var(--font-medium);    
+    font-weight: 400;
+    letter-spacing: 0.072rem;
+    border: none;    
+}
+
+.input_editItem{   
+    font-family: var(--base-font);
+    font-size: var(--font-small);    
+    font-weight: 400;
+    letter-spacing: 0.072rem;
+    border: none;
+    border-bottom: var(--primary-solid) 2px solid;
+    width: 35rem;    
+}
+
+.textarea_editItem{    
+    font-family: var(--base-font);
+    font-size: var(--font-medium);    
+    font-weight: 400;
+    letter-spacing: 0.07rem;
+    padding: 0.5rem;
+    width: 90rem;
+    height: 20rem;
+    border-radius: 0.25rem;
+}
+
+
+.btn_editItem{
+    font-family: var(--base-font);
+    font-size: var(--font-xsmall);
+    font-weight: 600;    
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    padding: 0.05rem;
+    border: none;   
+    width: 15rem;
+    height: 4rem; 
+}
+.input_editItem2{   
+    font-family: var(--base-font);
+    font-size: var(--font-small);    
+    font-weight: 400;
+    letter-spacing: 0.072rem;
+    border: none;
+    border-bottom: var(--primary-solid) 2px solid;
+    width: 14rem;    
+}
+
+.input_seleccionarArchivo{
+    text-align: center;
+    font-family: var(--base-font);
+    font-size: var(--font-small);    
+    font-weight: 400;
+    letter-spacing: 0.072rem;
+    border: none;    
+}
+
