@@ -27,7 +27,6 @@ header {
     transition: background .3s ease-in-out;
     position: relative; /*Me va a servir para que el submenu sea relativo al padre*/
     text-transform: uppercase;
-
 }
 
 .navbar__link:hover{

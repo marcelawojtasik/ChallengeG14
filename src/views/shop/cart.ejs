@@ -8,65 +8,96 @@
 </head>
 <body>
     <%- include ('../partials/header')%>
-    <main class="container cart">
+    <main id="shop" class="container">
         
-        <p class="cart_titles">CARRITO DE COMPRAS</p>
+        <p class="cart_title">Carrito de compras</p>
     
         <section class="cart_header">
-           <p class="cart_column">DETALLE DE PRODUCTO</p>
-           <p class="cart_column">CANTIDAD</p>
-           <p class="cart_column">TOTAL</p>        
-        
+           <p class="cart_column">Detalle de producto</p>
+           <p class="cart_column">cantidad</p>
+           <p class="cart_column">Total</p>      
         </section>
 
-        <section class="cart_line">
-            <picture class="cart_img"><img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda (Grogu)"></picture>                
-            <div class=""><p class="cart_name">BABY YODA BLUEBALL</p>
-                <p class="cart_licence">Star Wars</p>
-                <p class="cart_price">Precio $ 1799,99</p></div>
-               
-            <div class="cart_column item_cart">
-                    <input class="cart_input" type="text" id="quantity" name="quantity" placeholder="0">
-                    <button id="quitar" class="item_quantity item_carrito" type="button">-</button>   
-                    <button id="agregar" class="item_quantity item_carrito" type="button">+</button>                   
-            </div>
-            <div class="cart_column">
-                <p class="cart_subtotal">$ Total</p>
-            </div>
-            <div class="cart_column"> <p style="color: red;"> X</p>
-            </div>
-                         
-                 
+        <section>
+            <ul class="cart_items"> 
+                <li class="cart__item">
+                    <picture class="item_img"><img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda (Grogu)"></picture>                
+                    <div class="cart_column">
+                        <div class="cart_item">
+                            <p class="item_name">baby yoda blueball</p>
+                            <p class="item_licence">Star Wars</p>
+                            <p class="item_price">Precio unitario $ 1799,99</p>
+                        </div> 
+                    </div>                                          
+                    <div class="cart_column">
+                            <input class="cart_input" type="text" id="quantity" name="quantity" placeholder="0">
+                            <button id="quitar" class="item_quantity item_carrito" type="button">-</button>   
+                            <button id="agregar" class="item_quantity item_carrito" type="button">+</button>                   
+                    </div>
+                    <div class="cart_column">
+                        <p class="item_total">$ Total</p>
+                    </div>
+                    <div class="cart_column"> 
+                        <a href=""><iconify-icon icon="system-uicons:cross-circle" class="quitarItem"></iconify-icon></a>                        
+                    </div>
+                </li>  
+                <li class="cart__item">
+                    <picture class="item_img"><img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda (Grogu)"></picture>                
+                    <div class="cart_column">
+                        <div class="cart_item">
+                            <p class="item_name">baby yoda blueball</p>
+                            <p class="item_licence">Star Wars</p>
+                            <p class="item_price">Precio unitario $ 1799,99</p>
+                        </div> 
+                    </div>                                          
+                    <div class="cart_column">
+                            <input class="cart_input" type="text" id="quantity" name="quantity" placeholder="0">
+                            <button id="quitar" class="item_quantity item_carrito" type="button">-</button>   
+                            <button id="agregar" class="item_quantity item_carrito" type="button">+</button>                   
+                    </div>
+                    <div class="cart_column">
+                        <p class="item_total">$ Total</p>
+                    </div>
+                    <div class="cart_column"> 
+                        <a href=""><iconify-icon icon="system-uicons:cross-circle" class="quitarItem"></iconify-icon></a>                        
+                    </div>
+                </li>                              
+            </ul>                 
         </section>
 
-        <p class="cart_titles">RESUMEN</p>
-
-        <section class="cart_resume">
-            <ul class="cart_resume__data">
-                <li><p class="cart_resume_desc">CANTIDAD DE ELEMENTOS</p></li>
-                <li><p class="cart_resume_desc">SUBTOTAL</p></li>
-                <li><p class="cart_resume_desc">ENVIO</p></li>
-            </ul>
-                
-                
-                
-                <div>
-                <p class="cart_resume_total">TOTAL</p>
+        <%#probando armar summary con campos en div %>
+        <section class="alinear"> 
+            <p class="cart_title">Resumen</p>
+            <section class="cart__summary">
+                <ul class="cart_summary">
+                    <div class="cart_summary_info">
+                        <li><p class="cart_summary_desc">cantidad de elementos</p></li>
+                        <p class="cart_summary_desc_price">$0</p>
+                    </div>
+                    <div class="cart_summary_info">
+                        <li><p class="cart_summary_desc">subtotal</p></li>
+                        <p class="cart_summary_desc_price">$0</p>
+                    </div>
+                    <div class="cart_summary_info">
+                        <li><p class="cart_summary_desc">envio</p></li>
+                        <p class="cart_summary_desc_price">$2999</p>
+                    </div>                    
+                </ul>
+                <div class="cart_total">
+                    <p class="cart_summary_desc">total</p>
+                    <p class="cart_summary_desc_price">$200</p>
                 </div> 
-        </section>
-
-             
-
-        
-        
-        <button id="" class="item_quantity item_carrito" type="button">IR A PAGAR</button>
-        
-
+            </section>
+            <button id="pay" class="item_quantity item_carrito" type="button">IR A PAGAR</button>
+        </section>   
+       
     </main>
     
 
 
     <%- include ('../partials/footer')%>
     <script src="/js/item.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
 </body>
 </html>

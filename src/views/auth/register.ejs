@@ -8,12 +8,39 @@
 </head>
 <body>
     <%- include ('../partials/header')%>
+
     <section class="admin">
         <p class="admin_title">Crea tu cuenta</p>
-        
+        <p class="admin_welcome">Completa el formulario para ser parte del mundo de los Funkos</p>
+
+        <section id="form_login">     
+        <div class="login_data">
+            <label for="nombre" class="login_label">Nombre:</label>
+            <input class="info_login" type="text" name="nombre" id="nombre" placeholder="Jhon">
+        </div>
+        <div class="login_data">
+            <label for="apellido" class="login_label">Apellido:</label>
+            <input class="info_login" type="text" name="apellido" id="apellido" placeholder="Doe">
+        </div>
+        <div class="login_data">
+            <label for="email" class="login_label">Email:</label>
+            <input class="info_login" type="email" name="email" id="user_email" placeholder="johndoe@mail.com">
+        </div>
+        <div class="login_data">
+            <label for="password" class="login_label">Contraseña:</label>
+            <input class="info_login" type="password" name="password" id="password_login" placeholder="••••••••••">
+        </div>
+        <div class="login_data">
+            <label for="password" class="login_label">Contraseña:</label>
+            <input class="info_login" type="password" name="password" id="password_login" placeholder="••••••••••">
+        </div>
+        </section>        
+        <section class="login__buttons">
+            <button class="btn_login" type="submit"><a href="/admin">Registrar</a></button>
+            <p class="remember_user"><input class="check_login" type="checkbox">Acepto <a class="forget_password TyC" href="#">Terminos y Condiciones</a></p>
+        </section> 
     </section>
     
-    <%- include ('../partials/footer')%>
-    
+    <%- include ('../partials/footer')%>    
 </body>
 </html>

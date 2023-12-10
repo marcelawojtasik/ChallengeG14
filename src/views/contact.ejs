@@ -8,7 +8,18 @@
 </head>
 <body>
     <%- include ('./partials/header')%>
-    <p class="item_licence">EN CONSTRUCCION</p>
+
+    <main id="form_login">
+        <p class="admin_title">Envianos tu mensaje</p>
+        <section id="admin">
+            
+            <textarea name="message" id="message" placeholder="Escribinos!" class="textarea_editItem"></textarea>
+        </section>
+        <section class="login__buttons">
+            <button class="btn_login" type="submit" value="Ingresar">Enviar</button>
+        </section>
+    </main>     
+
     <%- include ('./partials/footer')%>
 </body>
 </html>

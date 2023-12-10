@@ -8,16 +8,6 @@
     margin: 0 auto var(--spacing-36) auto;
 }
 
-.login_title{
-    font-family: var(--alternative-font);
-    font-weight: 700;
-    font-size: var(--font-jumbo);
-    text-transform: uppercase;
-    letter-spacing: 0.15rem;    
-    flex-direction: row;
-    margin: var(--spacing-24) auto;
-}
-
 .login_data{
     display: flex;
     justify-content: space-between;
@@ -100,7 +90,9 @@ input, input::placeholder{
     font-size: var(--font-xsmall);
 }
 
-
+.TyC{
+    font-size: var(--font-xsmall);
+}
 
 
 
