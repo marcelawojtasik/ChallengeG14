@@ -1,13 +1,22 @@
 /*SHOP*/
-.shop_main{
+#shop_main{
+    display: flex;   
+    padding: 2rem;
+}
+.shop__filters{
     display: flex;
-    flex-direction: row;     
+    flex-direction: column;
 }
 
-.shop_items{       
+.shop__items{       
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; 
 }
 
-.shop__item{
-    flex-flow: column wrap;
+.shop_items{
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
+

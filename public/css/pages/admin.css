@@ -3,7 +3,7 @@
     display: flex;    
     align-items: center;
     flex-direction: column;
-    padding: var(--spacing-24);
+    padding: var(--spacing-24);    
 }
 .admin_title{
     font-family: var(--alternative-font);
@@ -12,6 +12,13 @@
     text-transform: uppercase;
     padding-bottom: 2.5rem;
     letter-spacing: 0.168rem;
+}
+
+.admin_welcome{
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    font-size: var(--font-large);
+    margin: 2rem;
 }
 
 #admin_search{    
