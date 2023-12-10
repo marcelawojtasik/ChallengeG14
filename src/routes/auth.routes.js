@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const controller = require('../controllers/auth.controller');
+const {login, doLogin, register, doRegister, logout} = require('../controllers/auth.controller');
 
-router.get('/login', controller.login);
-router.post('/login', (req, res) => res.send('Esta es la ruta que valida los datos del Login')); /*asociada a boton ingresar*/ 
-router.get('/register', controller.register);
-router.post('/register', (req, res) => res.send('Esta es la ruta que crea un nuevo user'));
-router.get('/logout', controller.logout);
+router.get('/login', login);
+router.post('/login', doLogin); /*asociada a boton ingresar*/ 
+router.get('/register', register);
+router.post('/register', doRegister);
+router.get('/logout', logout);
 
 module.exports= router;

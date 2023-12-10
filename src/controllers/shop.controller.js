@@ -11,9 +11,11 @@ module.exports = {
             title: "Carrito de compras | Funkoshop"
         });
     },
-    item : (req,res) => {
+    addToCart:(req,res) => res.send('Esta es la ruta para agregar un item al carrito - desde el Controller'),
+    item: (req,res) => {
         res.render(path.resolve(__dirname, '../views/shop/item.ejs'), {
             title: "Item | Funkoshop"
         });
-    }
+    },
+    addItem: (req,res) => res.send('Esta es la ruta para agregar un nuevo item - desde el Controller')
 }

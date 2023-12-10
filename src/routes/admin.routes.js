@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const controller= require('../controllers/admin.controller')
+const {admin, create, doCreate, edit, putItem, deleteItem}= require('../controllers/admin.controller')
 
-router.get('/', controller.admin);
-router.get('/create', controller.create);
-router.post('/create', (req,res) => res.send('Esta es la ruta para Agregar un nuevo item')); /*asociada a boton agregar producto. Recibe datos de form en req*/
-router.get('/edit/:id', controller.edit);
-router.put('/edit/:id', (req,res) => res.send('Esta es la vista para IMPACTAR LA MODIFICACION')); /*asociada a boton modificar producto*/
-router.delete('/delete/:id', (req,res) => res.send('Esta es la ruta para Borrar un item'));
+router.get('/', admin);
+router.get('/create', create);
+router.post('/create', doCreate); 
+router.get('/edit/:id', edit);
+router.put('/edit/:id', putItem),
+router.delete('/delete/:id', deleteItem);
 
 module.exports= router;
