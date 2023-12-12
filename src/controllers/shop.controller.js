@@ -121,7 +121,6 @@ module.exports = {
         
         //json.find(item =>item.productId == itemId);
 
-
         res.render(path.resolve(__dirname, '../views/shop/item.ejs'), {
             title: "Item | Funkoshop",
             item
@@ -129,6 +128,3 @@ module.exports = {
     },
     addItem: (req,res) => res.send('Esta es la ruta para agregar un nuevo item - desde el Controller')
 }
-
- 
-        
