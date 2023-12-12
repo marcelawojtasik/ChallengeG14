@@ -1,9 +1,15 @@
 const path = require('path');
+const {getAll} = require('../models/product.model');
 
 module.exports = {
-    admin: (req,res) => res.render(path.resolve(__dirname, '../views/admin/admin.ejs'), {
-        title: "Admin | Funkoshop"
-    }),
+    admin: async(req,res) => {
+        const data = await getAll();
+          
+        res.render(path.resolve(__dirname, '../views/admin/admin.ejs'), {
+        title: "Admin | Funkoshop",
+        data
+    })
+    },
     create: (req,res) => res.render(path.resolve(__dirname, '../views/admin/create.ejs'), {
         title: "Crear Item | Funkoshop"
     }),
