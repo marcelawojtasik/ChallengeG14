@@ -16,32 +16,34 @@
         <section class="info_editItem">
             <label class="label_editItem" for="">Categoría:</label>
             <select class="select_options" name="categorias" id="categoria">
-                <option selected disabled value="">Figuras</option>
+                <option selected disabled value="">Seleccionar</option>
+                <option value="">Figuras</option>
                 <option value="">Funkos</option>
                 <option value="">Remeras</option>
                 <option value="">Llaveros</option>
             </select>
             <label class="label_editItem" for="">Licencia:</label>
             <select class="select_options" name="" id="licencia">
-                <option selected disabled value="">Naruto Shippuden</option>
+                <option selected disabled value="">Seleccionar</option>
+                <option value="">Naruto Shippuden</option>
                 <option value="">Harry Potter</option>
                 <option value="">Star Wars</option>
                 <option value="">Pokemon</option>
             </select>
         </section>        
         <section class="info_editItem">
-            <label class="label_editItem2" for="">Nombre del producto:</label>
+            <label class="label_editItem2" for="name">Nombre del producto:</label>
             <input class="input_editItem" type="text" value="<%=product.product_name %>">
         </section>        
-        <textarea class="textarea_editItem" name="" id=""><%=product.product_description %></textarea>                             
+        <textarea class="textarea_editItem" name="description" id=""><%=product.product_description %></textarea>                             
         
         <section  class="info_editItem">
-            <label class="label_editItem2" for="">SKU:</label>
+            <label class="label_editItem2" for="sku">SKU:</label>
             <input class="input_editItem2" type="text" value="<%=product.sku %>">
-            <label class="label_editItem2" for="">Precio:</label>
-            <input class="input_editItem2" type="text" name="" id="" value="<%=product.price %>">
-            <label class="label_editItem2" for="">Stock:</label>
-            <input class="input_editItem2" type="text" name="" placeholder="10">
+            <label class="label_editItem2" for="price">Precio:</label>
+            <input class="input_editItem2" type="text" name="price" id="precio" value="<%=product.price %>">
+            <label class="label_editItem2" for="stock">Stock:</label>
+            <input class="input_editItem2" type="text" name="stock" placeholder="10">
         </section>        
         <section class="info_editItem">
             <label class="label_editItem2" for="">Descuento:</label>
@@ -54,12 +56,24 @@
             </select>
         </section>
         
-        <section>
-            <label class="label_editItem2" for="">Imágenes:</label>
-            <input class="file" type="file" id="file">
-        </section>
+        <div>
+            <label class="label_editItem2" for="images">Imágenes:</label>
+            <input class="file" type="file" name="images" id="file">
+        </div>
+        <div class="edit__imgs">
+            <div class="edit_img">
+                <img src="/img<%= product.image_front%>" alt="<%=product.product_description %>">
+                <p>Frente</p>
+            </div>
+            <div class="edit_img">
+                <img src="/img<%= product.image_back%>" alt="<%=product.product_description %>">
+                <p>Dorso</p>
+            </div> 
+        </div>
+        <div class="edit_buttons">
             <button class="btn_editItem" type="submit">Modificar Producto</button>
-        
+            <button class="btn_editItem" type="reset">Limpiar</button>
+        </div>
         </section>
         </form>
     </main>   
