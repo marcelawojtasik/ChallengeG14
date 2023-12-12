@@ -1,6 +1,8 @@
 const path = require('path');
-const {getAll} = require('../models/product.model');
-const data = [
+
+const {getAll, getOne} = require('../models/product.model');
+const json = [
+
     {
     product_id: 1,
     licence_name: "Pokemon",
@@ -97,6 +99,14 @@ const data = [
     img_front: "/img/pokemon/pidgeotto-1.webp",
     img_back: "/img/pokemon/pidgeotto-box.webp"
     },
+
+    ];
+
+module.exports = {   
+    shop: async (req,res) => {
+        const data = await getAll();
+        
+=======
     ]
 
 module.exports = {
@@ -207,6 +217,7 @@ module.exports = {
             },
             ]
 
+
         res.render(path.resolve(__dirname, '../views/shop/shop.ejs'), {
             title: "Shop | Funkoshop", 
             data
@@ -217,6 +228,22 @@ module.exports = {
             title: "Carrito de compras | Funkoshop"
         });
     },
+
+    addToCart: (req,res) => res.send('Esta es la ruta para agregar un item al carrito - desde el Controller'),
+    item: async (req,res) => {
+        const itemId = req.params.id;
+        const [item] = await getOne(itemId);
+        
+        //json.find(item =>item.productId == itemId);
+
+        res.render(path.resolve(__dirname, '../views/shop/item.ejs'), {
+            title: "Item | Funkoshop",
+            item
+        });
+    },
+    addItem: (req,res) => res.send('Esta es la ruta para agregar un nuevo item - desde el Controller')
+}
+
     addToCart:(req,res) => res.send('Esta es la ruta para agregar un item al carrito - desde el Controller'),
     item: (req,res) => {
 
@@ -231,3 +258,4 @@ module.exports = {
     },
     addItem: (req,res) => res.send('Esta es la ruta para agregar un nuevo item - desde el Controller')
 }
+

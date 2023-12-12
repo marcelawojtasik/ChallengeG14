@@ -10,6 +10,7 @@
     <%- include ('../partials/headerUser')%>
     
     <main>
+        <form action="/admin/edit" method="POST" enctype="application/x-www-form-urlencoded">
         <section class="editItem">
             <p class="admin_title">Editar item</p> 
         <section class="info_editItem">
@@ -30,15 +31,15 @@
         </section>        
         <section class="info_editItem">
             <label class="label_editItem2" for="">Nombre del producto:</label>
-            <input class="input_editItem" type="text" placeholder="Kakashi Hatake Shippuden Saga">
+            <input class="input_editItem" type="text" value="<%=product.product_name %>">
         </section>        
-        <textarea class="textarea_editItem" name="" id="">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori</textarea>                             
+        <textarea class="textarea_editItem" name="" id=""><%=product.product_description %></textarea>                             
         
         <section  class="info_editItem">
             <label class="label_editItem2" for="">SKU:</label>
-            <input class="input_editItem2" type="text" placeholder="NAR001012">
+            <input class="input_editItem2" type="text" value="<%=product.sku %>">
             <label class="label_editItem2" for="">Precio:</label>
-            <input class="input_editItem2" type="text" name="" id="" placeholder="$1799.99">
+            <input class="input_editItem2" type="text" name="" id="" value="<%=product.price %>">
             <label class="label_editItem2" for="">Stock:</label>
             <input class="input_editItem2" type="text" name="" placeholder="10">
         </section>        
@@ -60,6 +61,7 @@
             <button class="btn_editItem" type="submit">Modificar Producto</button>
         
         </section>
+        </form>
     </main>   
 
     <%- include ('../partials/footer')%>

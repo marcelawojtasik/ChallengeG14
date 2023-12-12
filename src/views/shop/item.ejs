@@ -11,21 +11,31 @@
     <%- include ('../partials/header')%>
     <main class="container">
         <section class="item">            
+
+                <picture class="card-item__cover">
+                    <img class="card-item__img--front" src="/img<%= item.image_front %>" alt="<%= item.product_description %>">
+                    <img class="card-item__img--back" src="/img<%= item.image_back %>" alt="<%= item.product_description %>">
+=======
                 <picture class="item_img card-item__cover">
                     <img src="/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Baby Yoda (Grogu)">
+
                 </picture>
                 <article class="item_info">
-                    <p class="item_licence">STAR WARS</p>
-                    <h3 class="item_name">BABY YODA BLUEBALL</h3>
-                     <p class="item_description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
-                    <p class="item_price">$ 1799,99</p>
+                    <p class="item_licence"><%= item.licence_name %></p>
+                    <h3 class="item_name"><%= item.product_name %></h3>
+                     <p class="item_description"><%= item.product_description %></p>
+                    <p class="item_price">$ <%= item.price %></p>
                     <div class="item_cart">
                         <input class="item_input" type="text" id="quantity" name="quantity" placeholder="0">
                         <button id="quitar" class="item_quantity" type="button">-</button>   
                         <button id="agregar" class="item_quantity" type="button">+</button>
                         <button class="item_carrito" type="submit">Agregar al carrito</button>
                     </div>
+
+                    <p class="item_promo"><a href="">Ver métodos de pago - <%= item.dues %> CUOTAS SIN INTERÉS</a></p>
+=======
                     <p class="item_promo"><a href="">Ver métodos de pago - 3 CUOTAS SIN INTERÉS</a></p>
+
                 </article>  
         </section>
     </main>
