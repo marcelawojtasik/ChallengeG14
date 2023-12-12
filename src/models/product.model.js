@@ -46,4 +46,14 @@ const getOne= async(id) => {
 module.exports = {
     getAll,
     getOne
+
+const getAll = async() => {
+    const data = await conn.query('SELECT * FROM product');
+
+    return data;
+} 
+
+module.exports = {
+    getAll
+
 }
