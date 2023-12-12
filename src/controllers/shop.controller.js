@@ -113,12 +113,14 @@ module.exports = {
             title: "Carrito de compras | Funkoshop"
         });
     },
+
     addToCart: (req,res) => res.send('Esta es la ruta para agregar un item al carrito - desde el Controller'),
     item: async (req,res) => {
         const itemId = req.params.id;
         const [item] = await getOne(itemId);
         
         //json.find(item =>item.productId == itemId);
+
 
         res.render(path.resolve(__dirname, '../views/shop/item.ejs'), {
             title: "Item | Funkoshop",
@@ -127,3 +129,6 @@ module.exports = {
     },
     addItem: (req,res) => res.send('Esta es la ruta para agregar un nuevo item - desde el Controller')
 }
+
+ 
+        
