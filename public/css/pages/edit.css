@@ -4,6 +4,7 @@
     flex-direction: column;
     padding: var(--spacing-24);
 }
+
 .admin_title{
     font-family: var(--alternative-font);
     font-weight: 500;
@@ -78,7 +79,6 @@
     border-radius: 0.25rem;
 }
 
-
 .btn_editItem{
     font-family: var(--base-font);
     font-size: var(--font-xsmall);
@@ -90,6 +90,7 @@
     width: 15rem;
     height: 4rem; 
 }
+
 .input_editItem2{   
     font-family: var(--base-font);
     font-size: var(--font-small);    
@@ -108,4 +109,3 @@
     letter-spacing: 0.072rem;
     border: none;    
 }
-

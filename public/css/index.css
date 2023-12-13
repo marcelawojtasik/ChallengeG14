@@ -23,7 +23,6 @@
 @import url('/css/pages/edit.css');
 
 
-
 *,
 *::before,
 *::after {
@@ -65,13 +64,3 @@ img { /*Normalizo para que se ajusten al contenedor padre*/
     max-width: 1200px;
     margin: 0 auto;
 }
-
-
-
-
-
-
-
-
-
-

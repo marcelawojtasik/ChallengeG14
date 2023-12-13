@@ -7,7 +7,6 @@
     margin: var(--spacing-68) auto;
 }
 
-
 .slider__title{
     font-family: var(--alternative-font);
     font-size: var(--font-display);
@@ -21,7 +20,7 @@ iconify-icon{
 }
 
 .glide__arrow--left{
-    left:0;
+    left: 0;
 }
 
 .glide__arrow--right{
@@ -30,5 +29,6 @@ iconify-icon{
 
 .slider__items{
     display: flex;
-    gap: var(--spacing-24);} 
+    gap: var(--spacing-36);
+} 
     /*para que tome estilo desde Glide*/ 

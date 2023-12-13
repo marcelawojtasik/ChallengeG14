@@ -5,6 +5,7 @@
     flex-direction: column;
     padding: var(--spacing-24);    
 }
+
 .admin_title{
     font-family: var(--alternative-font);
     font-weight: 500;
@@ -102,4 +103,3 @@ td{
     font-weight: 500;
     line-height: 253.523%; /* 60.845px */
 }
-
