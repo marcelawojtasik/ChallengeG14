@@ -113,7 +113,6 @@ module.exports = {
             title: "Carrito de compras | Funkoshop"
         });
     },
-
     addToCart: (req,res) => res.send('Esta es la ruta para agregar un item al carrito - desde el Controller'),
     item: async (req,res) => {
         const itemId = req.params.id;
