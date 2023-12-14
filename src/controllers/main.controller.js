@@ -9,5 +9,5 @@ module.exports = {
         title: "Contacto | Funkoshop"
     }),
     about: (req,res) => res.send('Esta es la vista sobre nosotros'),
-    faqs: (req,res) => res.send('Esta es la vista de preguntas frecuentes')
-}
+    faqs: (req,res) => res.send('Esta es la vista de preguntas frecuentes'),
+    }
