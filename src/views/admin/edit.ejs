@@ -10,25 +10,54 @@
     <%- include ('../partials/headerUser')%>
     
     <main>
-        <form action="/admin/edit" method="POST" enctype="application/x-www-form-urlencoded">
+        <form action="/admin/edit/<%=product.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <section class="editItem">
             <p class="admin_title">Editar item</p> 
         <section class="info_editItem">
-            <label class="label_editItem" for="">Categoría:</label>
-            <select class="select_options" name="categorias" id="categoria">
-                <option selected disabled value="">Seleccionar</option>
-                <option value="">Figuras</option>
-                <option value="">Funkos</option>
-                <option value="">Remeras</option>
-                <option value="">Llaveros</option>
+            <label class="label_editItem" for="category">Categoría:</label>
+            <select class="select_options" name="category" id="category">               
+                <% if (product.category_id == 1) { %>                
+                <option value="1" selected>Funkos</option>
+                <option value="2">Remeras</option>
+                <option value="3">Llaveros</option>
+                <% } %>
+                <% if (product.category_id == 2) { %>                
+                    <option value="1" selected>Funkos</option>
+                    <option value="2">Remeras</option>
+                    <option value="3">Llaveros</option>
+                <% } %>
+                <% if (product.category_id == 3) { %>                
+                    <option value="1" selected>Funkos</option>
+                    <option value="2">Remeras</option>
+                    <option value="3">Llaveros</option>
+                <% } %>
             </select>
-            <label class="label_editItem" for="">Licencia:</label>
-            <select class="select_options" name="" id="licencia">
-                <option selected disabled value="">Seleccionar</option>
-                <option value="">Naruto Shippuden</option>
-                <option value="">Harry Potter</option>
-                <option value="">Star Wars</option>
-                <option value="">Pokemon</option>
+            <label class="label_editItem" for="licence">Licencia:</label>
+            <select class="select_options" name="licence" id="licence">
+                <% if (product.licence_id == 1) { %>
+                    <option value="1" selected>Pokemon</option>
+                    <option value="2">Star Wars</option>
+                    <option value="3">Harry Potter</option>
+                    <option value="4">Naruto Shippuden</option>
+                <% } %>
+                <% if (product.licence_id == 2) { %>
+                    <option value="1">Pokemon</option>
+                    <option value="2" selected>Star Wars</option>
+                    <option value="3">Harry Potter</option>
+                    <option value="4">Naruto Shippuden</option>
+                <% } %>
+                <% if (product.licence_id == 3) { %>
+                    <option value="1">Pokemon</option>
+                    <option value="2">Star Wars</option>
+                    <option value="3" selected>Harry Potter</option>
+                    <option value="4">Naruto Shippuden</option>
+                <% } %>
+                <% if (product.licence_id == 4) { %>
+                    <option value="1">Pokemon</option>
+                    <option value="2">Star Wars</option>
+                    <option value="3">Harry Potter</option>
+                    <option value="4" selected>Naruto Shippuden</option>
+                <% } %>                
             </select>
         </section>        
         <section class="info_editItem">
@@ -43,16 +72,24 @@
             <label class="label_editItem2" for="price">Precio:</label>
             <input class="input_editItem2" type="text" name="price" id="precio" value="<%=product.price %>">
             <label class="label_editItem2" for="stock">Stock:</label>
-            <input class="input_editItem2" type="text" name="stock" placeholder="10">
+            <input class="input_editItem2" type="text" name="stock" value="<%=product.stock %>">
         </section>        
         <section class="info_editItem">
-            <label class="label_editItem2" for="">Descuento:</label>
-            <input class="input_editItem2" type="text" name="" id="" placeholder="10%">
-            <label class="label_editItem2" for="">Cuotas:</label>
-            <select class="select_options" id="cuotas">
-                <option selected value="">3 cuotas sin interés</option>
-                <option value="">6 cuotas con interés bajo</option>
-                <option value="">12 cuotas con interés</option>
+            <label class="label_editItem2" for="discount">Descuento:</label>
+            <input class="input_editItem2" type="text" name="discount" id="discount" value="<%=product.discount %>">
+            <label class="label_editItem2" for="dues">Cuotas:</label>
+            <select class="select_options" id="dues">
+                <% if (product.dues ==3) { %> 
+                <option selected value="1"><%=product.dues %> cuotas sin interés</option>
+                <option value="2">6 cuotas con interés bajo</option>
+                <option value="3">12 cuotas con interés</option>
+                <% } %>
+                <% if (product.dues ==6) { %> 
+                    <option selected value="2"><%=product.dues %> cuotas con interés bajo</option>                    
+                <% } %>
+                <% if (product.dues ==12) { %> 
+                    <option selected value="3"><%=product.dues %> cuotas con interés</option>                    
+                <% } %>
             </select>
         </section>
         
@@ -81,3 +118,4 @@
     <%- include ('../partials/footer')%>
 </body>
 </html>
+

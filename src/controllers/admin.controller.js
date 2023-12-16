@@ -13,10 +13,17 @@ module.exports = {
     create: (req,res) => res.render(path.resolve(__dirname, '../views/admin/create.ejs'), {
         title: "Crear Item | Funkoshop"
     }),
-    doCreate: (req,res) => res.send('Esta es la ruta para Agregar un nuevo item'), /*asociada a boton agregar producto. Recibe datos de form en req*/
+    doCreate: async(req,res) => {
+        const item = req.body;
+        console.log(item);
+        /**/
+         /**/
+        res.redirect('/admin');    
+    },
+    /*res.send('Esta es la ruta para Agregar un nuevo item'), asociada a boton agregar producto. Recibe datos de form en req*/
     edit: async(req,res) => {
         const {id} = req.params;
-        const [product] = await getOne(id);
+        const [product] = await getOne({product_id : id}); /*Paso el objeto con el param q quiero q tome */
 
         res.render(path.resolve(__dirname, '../views/admin/edit.ejs'), {
         title: "Editar Item | Funkoshop",

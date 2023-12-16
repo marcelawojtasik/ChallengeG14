@@ -10,11 +10,13 @@
     <%- include ('../partials/headerUser')%>
     
     <main>
-        <section class="editItem">
+        <div class="editItem">
             <p class="admin_title">Crear Nuevo item</p> 
-        <section class="info_editItem">
+        </div>
+            <form class="editItem" action="/admin/create" method="POST" enctype="multipart/form-data">    
+            <section class="info_editItem">
             <label class="label_editItem" for="">Categoría:</label>
-            <select class="select_options" name="categorias" id="categoria">
+            <select class="select_options" name="category" id="categoria">
                 <option selected disabled value="">Seleccionar</option>
                 <option value="">Funkos</option>
                 <option value="">Remeras</option>
@@ -54,13 +56,14 @@
         </section>
         
         <section>
-            <label class="label_editItem2" for="">Imágenes:</label>
-            <input class="file" type="file" id="file">
+            <label class="label_editItem2" for="images">Imágenes:</label>
+            <input class="file" type="file" name="images" id="file" multiple>
         </section>
         <div class="edit_buttons">
             <button class="btn_editItem" type="submit">Agregar Producto</button>
-            <button class="btn_editItem" type="submit">Limpiar</button>
+            <button class="btn_editItem" type="reset">Limpiar</button>
         </div>
+        </form>
     </main>   
 
     <%- include ('../partials/footer')%>
