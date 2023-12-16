@@ -10,6 +10,7 @@
     <%- include ('../partials/headerUser')%>
     
     <main>
+
         <form action="/admin/edit/<%=product.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <section class="editItem">
             <p class="admin_title">Editar item</p> 
@@ -58,6 +59,7 @@
                     <option value="3">Harry Potter</option>
                     <option value="4" selected>Naruto Shippuden</option>
                 <% } %>                
+
             </select>
         </section>        
         <section class="info_editItem">
@@ -73,6 +75,7 @@
             <input class="input_editItem2" type="text" name="price" id="precio" value="<%=product.price %>">
             <label class="label_editItem2" for="stock">Stock:</label>
             <input class="input_editItem2" type="text" name="stock" value="<%=product.stock %>">
+
         </section>        
         <section class="info_editItem">
             <label class="label_editItem2" for="discount">Descuento:</label>

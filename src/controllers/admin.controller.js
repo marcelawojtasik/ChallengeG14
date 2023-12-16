@@ -13,6 +13,7 @@ module.exports = {
     create: (req,res) => res.render(path.resolve(__dirname, '../views/admin/create.ejs'), {
         title: "Crear Item | Funkoshop"
     }),
+
     doCreate: async(req,res) => {        
         console.log(req.body);
         console.log(req.files);
