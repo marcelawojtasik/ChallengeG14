@@ -1,5 +1,5 @@
 const path = require('path');
-const {getAll, getOne, doCreate, deleteOne} = require('../models/product.model');
+const {getAll, getOne, doCreate, deleteOne, edit} = require('../models/product.model');
 
 module.exports = {
     admin: async(req,res) => {
@@ -44,7 +44,44 @@ module.exports = {
         product
     })
     },
-    putItem: (req,res) => res.send('Esta es la vista para IMPACTAR LA MODIFICACION'), /*asociada a boton modificar producto*/
+    putItem: async(req,res) => {
+        const {id} = req.params;
+        console.log("id", req.params);
+        console.log("Body : ", req.body);
+        console.log("Files", req.files);
+        
+        const haveImages = req.files.length !== 0;
+
+        const product_schema = haveImages
+        ? {
+            product_name: req.body.productName,
+            product_description: req.body.productDesc,
+            price: req.body.price,
+            stock: req.body.stock,
+            discount: req.body.discount,
+            sku: req.body.sku,
+            dues: req.body.cuotas,
+            image_front: '/'+ req.files[0].filename,
+            image_back: '/'+ req.files[1].filename,
+            category_id: req.body.category,
+            licence_id: req.body.licence
+        }
+        : {
+            product_name: req.body.productName,
+            product_description: req.body.productDesc,
+            price: req.body.price,
+            stock: req.body.stock,
+            discount: req.body.discount,
+            sku: req.body.sku,
+            dues: req.body.dues,
+            category_id: req.body.category,
+            licence_id: req.body.licence
+        };
+        const result = await edit(product_schema, {product_id: id});
+        console.log(result);
+        res.redirect('/shop'); 
+    },
+        
     deleteItem: async(req,res) => {
         const {id} = req.params;
         await deleteOne({product_id: id});

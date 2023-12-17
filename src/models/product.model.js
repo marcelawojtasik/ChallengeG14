@@ -71,10 +71,25 @@ const deleteOne = async (params) => {
     }
 }
 
+const edit = async (params, id) => {
+    try {
+        const [product] = await conn.query('UPDATE product SET ? WHERE ?', [params, id]);
+        return product;
+    } catch (error) {
+        return {
+            error: true,
+            message: "Error catastrófico: " + error
+        }
+    }finally{
+        conn.releaseConnection();
+    }
+}
+
 
 module.exports = {
     getAll,
     getOne,
     doCreate,
-    deleteOne
+    deleteOne,
+    edit
 }
