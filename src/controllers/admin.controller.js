@@ -1,5 +1,5 @@
 const path = require('path');
-const {getAll, getOne, doCreate} = require('../models/product.model');
+const {getAll, getOne, doCreate, deleteOne} = require('../models/product.model');
 
 module.exports = {
     admin: async(req,res) => {
@@ -25,8 +25,8 @@ module.exports = {
             discount: req.body.discount,
             sku: req.body.sku,
             dues: req.body.dues,
-            image_front: req.files[0].originalname,
-            image_back: req.files[1].originalname,
+            image_front: '/'+ req.files[0].filename,
+            image_back: '/'+ req.files[1].filename,
             category_id: req.body.category,
             licence_id: req.body.licence
         }
@@ -35,7 +35,6 @@ module.exports = {
         console.log(result);    
         res.redirect('/admin');    
     },
-    /*res.send('Esta es la ruta para Agregar un nuevo item'), asociada a boton agregar producto. Recibe datos de form en req*/
     edit: async(req,res) => {
         const {id} = req.params;
         const [product] = await getOne({product_id : id}); /*Paso el objeto con el param q quiero q tome */
@@ -46,5 +45,10 @@ module.exports = {
     })
     },
     putItem: (req,res) => res.send('Esta es la vista para IMPACTAR LA MODIFICACION'), /*asociada a boton modificar producto*/
-    deleteItem: (req,res) => res.send('Esta es la ruta para Borrar un item')
+    deleteItem: async(req,res) => {
+        const {id} = req.params;
+        await deleteOne({product_id: id});
+        res.redirect('/admin');
+    }
+    
 }
