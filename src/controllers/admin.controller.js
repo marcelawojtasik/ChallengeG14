@@ -60,7 +60,7 @@ module.exports = {
             stock: req.body.stock,
             discount: req.body.discount,
             sku: req.body.sku,
-            dues: req.body.cuotas,
+            dues: req.body.dues,
             image_front: '/'+ req.files[0].filename,
             image_back: '/'+ req.files[1].filename,
             category_id: req.body.category,
