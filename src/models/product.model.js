@@ -31,7 +31,7 @@ const getAll = async() => {
 
 const getOne= async(param) => {
     try{
-    const [rows] = await conn.query('SELECT product.*, category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id WHERE ?', param);
+    const [rows] = await conn.query('SELECT product.*, category.category_name, licence.licence_name FROM (product LEFT JOIN category ON product.category_id = category.category_id) LEFT JOIN licence ON product.licence_id = licence.licence_id WHERE ?;', param);
     return rows;
     } catch (error) {
         return {
@@ -57,8 +57,39 @@ const doCreate = async (params) => {
     }
 }
 
+const deleteOne = async (params) => {
+    try {
+        const [product] = await conn.query('DELETE FROM product WHERE ?', [params]);
+        return product;
+    } catch (error) {
+        return {
+            error: true,
+            message: "Error catastrófico: " + error
+        }
+    }finally{
+        conn.releaseConnection();
+    }
+}
+
+const edit = async (params, id) => {
+    try {
+        const [product] = await conn.query('UPDATE product SET ? WHERE ?', [params, id]);
+        return product;
+    } catch (error) {
+        return {
+            error: true,
+            message: "Error catastrófico: " + error
+        }
+    }finally{
+        conn.releaseConnection();
+    }
+}
+
+
 module.exports = {
     getAll,
     getOne,
-    doCreate
+    doCreate,
+    deleteOne,
+    edit
 }

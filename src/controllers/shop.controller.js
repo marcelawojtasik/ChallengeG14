@@ -116,8 +116,9 @@ module.exports = {
     addToCart: (req,res) => res.send('Esta es la ruta para agregar un item al carrito - desde el Controller'),
     item: async (req,res) => {
         const itemId = req.params.id;
-        const [item] = await getOne(itemId);
-        
+        const [item] = await getOne({product_id: itemId});
+        //console.log(itemId);
+        //console.log(item);
         //json.find(item =>item.productId == itemId);
 
         res.render(path.resolve(__dirname, '../views/shop/item.ejs'), {
