@@ -47,6 +47,7 @@
     letter-spacing: 0.096rem;
     margin-right: 15px;
 }
+
 .login__buttons{
     display: flex;
     justify-content:center;
@@ -93,10 +94,3 @@ input, input::placeholder{
 .TyC{
     font-size: var(--font-xsmall);
 }
-
-
-
-
-
-
-

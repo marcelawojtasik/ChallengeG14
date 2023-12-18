@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 
 const pool = mysql.createPool({
     user: 'root',
-    password: 'Santino0503',
+    password: 'Root5715',
     host: 'localhost',
     port: 3306,
     database: 'funkodb',

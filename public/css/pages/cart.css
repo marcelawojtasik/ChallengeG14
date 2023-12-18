@@ -13,6 +13,7 @@
     padding-top: 3rem;
     margin: 3rem 0;
 }
+
 .cart_header{
     display: flex;
     font-family: var(--base-font);
@@ -27,11 +28,11 @@
     padding: var(--spacing-20) var(--spacing-68);
 
 }
+
 .cart_column{
     display: flex;
     flex-grow: 1;
 }
-
 
 /*Section items agregados*/
 
@@ -69,6 +70,7 @@
     font-size: var(--font-small);
     text-transform: uppercase;
 }
+
 .item_price{
     font-family: var(--base-font);
     font-weight: 500;
@@ -117,6 +119,7 @@
     margin: var(--spacing-16) 0;
     text-transform: uppercase;
 }
+
 .cart_summary_desc_price{
     font-family: var(--base-font);
     font-weight: 600;
@@ -137,6 +140,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .cart_total_price{
     font-family: var(--base-font);
     font-weight: 600;
@@ -145,8 +149,8 @@
     display:inline-block;
     text-transform: uppercase;    
     padding: 1rem 0;
-    
 }
+
 #pay{
     margin: 2rem 0;
     width: 50rem;
@@ -160,9 +164,9 @@
     align-items: end;
     margin-bottom: 5rem;
 }
+
 .cart_summary_info{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-

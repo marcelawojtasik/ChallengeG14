@@ -8,6 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;    
+    flex-wrap: wrap;
 }
 
 .navbar__logo {
@@ -36,7 +37,7 @@ header {
 .with-icon{
     display: flex;
     align-items: center;
-    gap: var(--spacing-8);
+    gap: 2px;
 }
 
 .with-submenu:hover .submenu{
@@ -60,4 +61,19 @@ header {
 
 .submenu__link:hover{
     background-color: var(--primary-900);
+}
+
+@media (max-width: 807px) {
+
+    .navbar {
+        justify-content: center;
+        gap: var(--spacing-20);
+    }   
+}
+
+@media (max-width: 478px) {
+
+    .navbar__menu {
+        display: none;
+    }   
 }

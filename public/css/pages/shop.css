@@ -1,8 +1,10 @@
 /*SHOP*/
+
 #shop_main{
     display: flex;   
     padding: 2rem;
 }
+
 .shop__filters{
     display: flex;
     flex-direction: column;
@@ -19,4 +21,3 @@
     display: grid;
     grid-template-columns: auto auto auto;
 }
-
