@@ -3,6 +3,7 @@ const agregar= document.querySelector('#agregar');
 const quitar= document.querySelector('#quitar');
 const quantity = document.querySelector('#quantity');
 
+
 agregar.addEventListener('click', () => quantity.value= Number(quantity.value)+1);
 
 quitar.addEventListener('click', () => {
@@ -14,3 +15,5 @@ quitar.addEventListener('click', () => {
 });
     
 /*Ver si la logica del contador no arruina algo*/
+
+

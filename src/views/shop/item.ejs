@@ -10,7 +10,7 @@
 
     <%- include ('../partials/header')%>
     <main class="container">
-        <section class="item">            
+        <form class="item" action="/shop/cart">            
                 <picture class="card-item__cover">
                     <img class="card-item__img--front" src="/img<%= item.image_front %>" alt="<%= item.product_description %>">
                     <img class="card-item__img--back" src="/img<%= item.image_back %>" alt="<%= item.product_description %>">
@@ -18,17 +18,19 @@
                 <article class="item_info">
                     <p class="item_licence"><%= item.licence_name %></p>
                     <h3 class="item_name"><%= item.product_name %></h3>
-                     <p class="item_description"><%= item.product_description %></p>
+                    <p class="item_description"><%= item.product_description %></p>
                     <p class="item_price">$ <%= item.price %></p>
-                    <div class="item_cart">
+                    <div class="item_cart">  
                         <input class="item_input" type="text" id="quantity" name="quantity" placeholder="0">
-                        <button id="quitar" class="item_quantity" type="button">-</button>   
+                        <div class="btns">
                         <button id="agregar" class="item_quantity" type="button">+</button>
+                        <button id="quitar" class="item_quantity" type="button">-</button> 
+                        </div>
                         <button class="item_carrito" type="submit">Agregar al carrito</button>
                     </div>
                     <p class="item_promo"><a href="">Ver métodos de pago - <%= item.dues %> CUOTAS SIN INTERÉS</a></p>
                 </article>  
-        </section>
+            </form>
     </main>
 
     <%- include ('../components/slider')%>    

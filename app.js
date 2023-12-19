@@ -3,11 +3,13 @@ const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 
+
 /* Routes import */
 const mainRoutes = require('./src/routes/main.routes');
 const shopRoutes = require('./src/routes/shop.routes');
 const authRoutes = require('./src/routes/auth.routes');
 const adminRoutes = require('./src/routes/admin.routes');
+const uploadF = require('./src/routes/admin.routes');
 
 const PORT = 3004;
 

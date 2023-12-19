@@ -10,57 +10,62 @@
     <%- include ('../partials/headerUser')%>
     
     <main>
-        <section class="editItem">
+        <div class="editItem">
             <p class="admin_title">Crear Nuevo item</p> 
-        <section class="info_editItem">
-            <label class="label_editItem" for="">Categoría:</label>
-            <select class="select_options" name="categorias" id="categoria">
-                <option selected disabled value="">Seleccionar</option>
-                <option value="">Funkos</option>
-                <option value="">Remeras</option>
-                <option value="">Llaveros</option>
+        </div>
+            <form class="editItem" action="/admin/create" method="POST" enctype="multipart/form-data">    
+            <section class="info_editItem">
+            <label class="label_editItem" for="category">Categoría:</label>
+            <select class="select_options" name="category" id="categoria">
+                <option value="0">Seleccionar</option>
+                <option value="1">Funkos</option>
+                <option value="2">Remeras</option>
+                <option value="3">Llaveros</option>
             </select>
-            <label class="label_editItem" for="">Licencia:</label>
-            <select class="select_options" name="" id="licencia">
-                <option selected disabled value="">Seleccionar</option>
-                <option value="">Harry Potter</option>
-                <option value="">Star Wars</option>
-                <option value="">Pokemon</option>
+            <label class="label_editItem" for="licence">Licencia:</label>
+            <select class="select_options" name="licence" id="licencia">
+                <option value="0">Seleccionar</option>
+                <option value="1">Harry Potter</option>
+                <option value="2">Star Wars</option>
+                <option value="3">Pokemon</option>
             </select>
         </section>        
         <section class="info_editItem">
-            <label class="label_editItem2" for="">Nombre del producto:</label>
-            <input class="input_editItem" type="text" placeholder="Kakashi Hatake Shippuden Saga">
+            <label class="label_editItem2" for="productName">Nombre del producto:</label>
+            <input class="input_editItem" name="productName" type="text" placeholder="Kakashi Hatake Shippuden Saga">
         </section>        
-        <textarea class="textarea_editItem" name="" id="" placeholder="Descripcion del producto"></textarea>                             
+        <textarea class="textarea_editItem" name="productDesc" id="" placeholder="Descripcion del producto">
+            
+        </textarea>                             
         
         <section  class="info_editItem">
-            <label class="label_editItem2" for="">SKU:</label>
-            <input class="input_editItem2" type="text" placeholder="SKU0111011">
-            <label class="label_editItem2" for="">Precio:</label>
-            <input class="input_editItem2" type="text" name="" id="" placeholder="$0">
-            <label class="label_editItem2" for="">Stock:</label>
-            <input class="input_editItem2" type="text" name="" placeholder="0">
+            <label class="label_editItem2" for="sku">SKU:</label>
+            <input class="input_editItem2" name="sku" type="text" placeholder="SKU0111011">
+            <label class="label_editItem2" for="price">Precio:</label>
+            <input class="input_editItem2" name="price" type="text" id="" placeholder="$0000.00">
+            <label class="label_editItem2" for="stock">Stock:</label>
+            <input class="input_editItem2" name="stock" type="text"  placeholder="0">
         </section>        
         <section class="info_editItem">
-            <label class="label_editItem2" for="">Descuento:</label>
-            <input class="input_editItem2" type="text" name="" id="" placeholder="0%">
-            <label class="label_editItem2" for="">Cuotas:</label>
-            <select class="select_options" id="cuotas">
-                <option selected value="">3 cuotas sin interés</option>
-                <option value="">6 cuotas con interés bajo</option>
-                <option value="">12 cuotas con interés</option>
+            <label class="label_editItem2" for="discount">Descuento:</label>
+            <input class="input_editItem2" type="text" name="discount" id="" placeholder="0%">
+            <label class="label_editItem2" for="dues">Cuotas:</label>
+            <select class="select_options" name="dues" id="cuotas">
+                <option value="3">3 cuotas sin interés</option>
+                <option value="6">6 cuotas con interés bajo</option>
+                <option value="12">12 cuotas con interés</option>
             </select>
         </section>
         
         <section>
-            <label class="label_editItem2" for="">Imágenes:</label>
-            <input class="file" type="file" id="file">
+            <label class="label_editItem2" for="images">Imágenes:</label>
+            <input class="file" type="file" name="images" id="file" multiple>
         </section>
         <div class="edit_buttons">
             <button class="btn_editItem" type="submit">Agregar Producto</button>
-            <button class="btn_editItem" type="submit">Limpiar</button>
+            <button class="btn_editItem" type="reset">Limpiar</button>
         </div>
+        </form>
     </main>   
 
     <%- include ('../partials/footer')%>
