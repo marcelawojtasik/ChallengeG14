@@ -53,11 +53,10 @@ function precioPorItemResta(){
     //const subtotal = ((Number(cantidadelegida)-1) * 1799.99);
     //document.getElementById('subtotal').innerHTML = "Total a pagar: $" + subtotal; 
 
-
     const cantidadElementos = (Number(cantidadelegida)-1); 
     document.getElementById('cantidadElementos').innerHTML = cantidadElementos; 
     //document.getElementById('resumenSubtotal').innerHTML = subtotal; 
-    //document.getElementById('resumenTotal').innerHTML = "$"+(subtotal + 2999);
+    //document.getElementById('resumenTotal').innerHTML = "$"+(subtotal + 2999); 
 }; 
 
 /*VER COMO NO REPETIR LA FUNC!!!*/
