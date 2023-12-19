@@ -39,7 +39,7 @@ function precioPorItemSuma(){
 
 function precioPorItemResta(){
     const cantidadelegida = document.getElementById('quantity').value;
-    if (cantidadelegida<1){
+    if (cantidadelegida<=1){
         const subtotal=0;
         document.getElementById('subtotal').innerHTML = "Total a pagar: $" + subtotal;
         document.getElementById('resumenSubtotal').innerHTML = subtotal; 
