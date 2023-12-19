@@ -31,8 +31,10 @@
                     </div>                                          
                     <div class="cart_column">
                             <input class="cart_input" type="text" id="quantity" name="quantity" placeholder="0">
-                            <button id="quitar" class="item_quantity item_carrito" type="button" onclick="precioPorItemResta()">-</button>   
-                            <button id="agregar" class="item_quantity item_carrito" type="button" onclick="precioPorItemSuma()">+</button>                   
+                            <div class="btns">
+                            <button id="agregar" class="item_quantity btns_cart" type="button" onclick="precioPorItemSuma()">+</button>     
+                            <button id="quitar" class="item_quantity btns_cart" type="button" onclick="precioPorItemResta()">-</button>   
+                            </div>                  
                     </div>
                     <div class="cart_column">
                         <p id="subtotal" class="item_total">$ ...</p>
@@ -52,8 +54,10 @@
                     </div>                                          
                     <div class="cart_column">
                             <input class="cart_input" type="text" id="quantity2" name="quantity2" placeholder="0">
-                            <button id="quitar2" class="item_quantity item_carrito" type="button" onclick="precioPorItemResta2()">-</button>   
-                            <button id="agregar2" class="item_quantity item_carrito" type="button" onclick="precioPorItemSuma2()">+</button>                   
+                            <div class="btns">
+                                <button id="agregar2" class="item_quantity btns_cart" type="button" onclick="precioPorItemSuma2()">+</button>
+                                <button id="quitar2" class="item_quantity btns_cart" type="button" onclick="precioPorItemResta2()">-</button>                              
+                            </div>                   
                     </div>
                     <div class="cart_column">
                         <p id="subtotal2" class="item_total">$ ...</p>
