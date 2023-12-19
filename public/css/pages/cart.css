@@ -170,3 +170,25 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+@media (max-width: 1028px) {
+
+    .card-item__name {
+        font-size: var(--font-xsmall);
+    }
+}
+
+@media (max-width: 451px) {
+
+    .card-item__tag {
+        right: -28px;
+    }
+
+    .card-item {
+        font-size: 80%;
+    }
+
+    .card-item__name {
+        font-size: var(--font-xsmall);
+    }
+}

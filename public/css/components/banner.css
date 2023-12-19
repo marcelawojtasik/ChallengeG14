@@ -56,3 +56,11 @@
     background-color: var(--primary-900);
     color: var(--light-font-solid);
 }
+
+@media (max-width: 451px) {
+
+    .hero__link {
+        padding: var(--spacing-12) var(--spacing-36);
+    }
+    
+}
