@@ -21,3 +21,28 @@
     display: grid;
     grid-template-columns: auto auto auto;
 }
+
+@media (max-width: 946px) {
+
+    .shop__filters_title{
+        font-size: var(--font-small);
+    }
+
+    #search {
+        width: auto;
+    }
+}
+
+@media (max-width: 658px) {
+    .shop_items{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 478px) {
+
+    .shop__filters{
+        display: none;
+    }
+}

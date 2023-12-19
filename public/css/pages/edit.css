@@ -137,3 +137,32 @@
     display: flex;
 }
 
+@media (max-width: 924px) {
+    .textarea_editItem{        
+        width: 60rem;
+    }
+}
+
+@media (max-width: 622px) {
+    
+    .admin_title{
+        font-size: var(--font-jumbo);
+        text-align: center;
+    }
+
+    .textarea_editItem{        
+        width: 50rem;
+    }
+}
+
+@media (max-width: 478px) {
+
+    .admin_title{
+        font-size: var(--font-jumbo);
+        text-align: center;
+    }
+
+    .textarea_editItem{        
+        width: 34rem;
+    }
+}
