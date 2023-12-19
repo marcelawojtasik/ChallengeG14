@@ -1,7 +1,6 @@
 const path = require('path');
 const {getAll, getOne, doCreate, deleteOne, edit} = require('../models/product.model');
 
-
 module.exports = {
     admin: async(req,res) => {
         const data = await getAll();
@@ -14,7 +13,6 @@ module.exports = {
     create: (req,res) => res.render(path.resolve(__dirname, '../views/admin/create.ejs'), {
         title: "Crear Item | Funkoshop"
     }),
-
     doCreate: async(req,res) => {        
         console.log(req.body);
         console.log(req.files);
@@ -37,7 +35,6 @@ module.exports = {
         console.log(result);    
         res.redirect('/admin');    
     },
-
     edit: async(req,res) => {
         const {id} = req.params;
         const [product] = await getOne({product_id : id}); /*Paso el objeto con el param q quiero q tome */
@@ -47,7 +44,6 @@ module.exports = {
         product
     })
     },
-
     putItem: async(req,res) => {
         const {id} = req.params;
         console.log("id", req.params);

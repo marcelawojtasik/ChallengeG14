@@ -83,6 +83,7 @@
     font-size: var(--font-medium);    
     margin: 0;
     width: 8rem;
+    text-align: center;
 }
 
 .item_total{
@@ -166,3 +167,6 @@
     flex-wrap: wrap;
 }
 
+.btns_cart{
+    background-color: var(--primary-solid);
+}

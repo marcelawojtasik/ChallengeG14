@@ -39,25 +39,44 @@ function precioPorItemSuma(){
 
 function precioPorItemResta(){
     const cantidadelegida = document.getElementById('quantity').value;
-    const subtotal = ((Number(cantidadelegida)-1) * 1799.99);
-    document.getElementById('subtotal').innerHTML = "Total a pagar: $" + subtotal;  
+    if (cantidadelegida<=1){
+        const subtotal=0;
+        document.getElementById('subtotal').innerHTML = "Total a pagar: $" + subtotal;
+        document.getElementById('resumenSubtotal').innerHTML = subtotal; 
+        document.getElementById('resumenTotal').innerHTML = "$"+(subtotal);
+    }else{
+        const subtotal = ((Number(cantidadelegida)-1) * 1799.99);
+        document.getElementById('subtotal').innerHTML = "Total a pagar: $" + subtotal; 
+        document.getElementById('resumenSubtotal').innerHTML = subtotal; 
+        document.getElementById('resumenTotal').innerHTML = "$"+(subtotal + 2999);
+    }
+    //const subtotal = ((Number(cantidadelegida)-1) * 1799.99);
+    //document.getElementById('subtotal').innerHTML = "Total a pagar: $" + subtotal; 
+
     const cantidadElementos = (Number(cantidadelegida)-1); 
-    document.getElementById('cantidadElementos').innerHTML = cantidadElementos;  
-    document.getElementById('resumenSubtotal').innerHTML = subtotal; 
-    document.getElementById('resumenTotal').innerHTML = "$"+(subtotal + 2999);
+    document.getElementById('cantidadElementos').innerHTML = cantidadElementos; 
+    //document.getElementById('resumenSubtotal').innerHTML = subtotal; 
+    //document.getElementById('resumenTotal').innerHTML = "$"+(subtotal + 2999); 
 }; 
 
 /*VER COMO NO REPETIR LA FUNC!!!*/
 function precioPorItemSuma2(){
     const cantidadelegida = document.getElementById('quantity2').value;
     const subtotal = ((Number(cantidadelegida)+1) * 1799.99);
-    document.getElementById('subtotal2').innerHTML = "Total a pagar: $" + subtotal;    
+    document.getElementById('subtotal2').innerHTML = "Total a pagar: $" + subtotal; 
 };
 
 function precioPorItemResta2(){
     const cantidadelegida = document.getElementById('quantity2').value;
-    const subtotal = ((Number(cantidadelegida)-1) * 1799.99);
-    document.getElementById('subtotal2').innerHTML = "Total a pagar: $" + subtotal;    
+    if (cantidadelegida<1){
+        const subtotal=0;
+        document.getElementById('subtotal2').innerHTML = "Total a pagar: $" + subtotal;
+    }else{
+        const subtotal = ((Number(cantidadelegida)-1) * 1799.99);
+        document.getElementById('subtotal2').innerHTML = "Total a pagar: $" + subtotal; 
+    }
+    //const subtotal = ((Number(cantidadelegida)-1) * 1799.99);
+    //document.getElementById('subtotal2').innerHTML = "Total a pagar: $" + subtotal;    
 }; 
 
 /*CANTIDAD DE ELEMENTOS*/
